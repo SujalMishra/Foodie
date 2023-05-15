@@ -30,9 +30,10 @@ router.post("/creatuser",
         email:req.body.email,
         location:req.body.location
     })
+    // console.log(res.json(password));
     res.json({success:true});
   } catch (error) {
-    console.log(error);
+    console.log("db error"+error);
     res.json({success:false});
 
   }
@@ -58,7 +59,7 @@ router.post('/loginuser',
     }
     const pwdCompare = await bcrypt.compare(req.body.password,userData.password);
     if( !pwdCompare ){
-      // console.log(req.body.password +" "+userData.password);
+      console.log(req.body.password +" "+userData.password);
       return res.status(400).json({errors:"Try logging1 with right credentials"});
     }
 
