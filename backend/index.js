@@ -8,7 +8,7 @@ mongoDB();
 
 app.use((req,res,next)=>{
   // res.setHeader("Access-Control-Allow-Origin","http://localhost:3000");
-  res.setHeader("Access-Control-Allow-Origin","https://foodie-unicorn.netlify.app/");
+  res.setHeader("Access-Control-Allow-Origin","https://foodie-unicorn.netlify.app");
 
   res.header(
     "Access-Control-Allow-Headers",
